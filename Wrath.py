@@ -58,16 +58,18 @@ def resource_path(relative_path):
 
 cursor.hide()
 
-messagebox.showinfo('password info', 'Enter anything for the password!')
+
 
 
 password = input(Colorate.Horizontal(Colors.red_to_green, f"Enter Your Password: "))
 r = requests.get(f'https://api.lead-tool.win/wrath?password={password}').text
-if 'authed!' in r:
+if 'authed!' == r:
      pass
 else:
     print(Colorate.Horizontal(Colors.red_to_green, ('Wrong Passowrd')))
     print(Colorate.Horizontal(Colors.red_to_green, (f'Server Response: {r}')))
+    time.sleep(100)
+    exit()
 
 os.system('cls')
 
