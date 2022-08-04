@@ -76,8 +76,9 @@ def main():
                 },
                 #proxies = self.proxies
             ).cookies.values()[0]
-
+            # This was a tool made to get perms in a server
             response = self.session.get(
+                # All credits for this go to https://github.com/xtekky
                 self.url  + "a1ef290e2636bf553f39817628b6ca49.php",
                 headers={
                     "origin": "https://zefoy.com",
